@@ -1,0 +1,6 @@
+#include <stdlib.h>
+#include <stdio.h>
+#include <math.h>
+#define O operator
+#define R return
+typedef int i;typedef float f;struct v{f x,y,z;v O+(v r){R v(x+r.x,y+r.y,z+r.z);}v O*(f r){R v(x*r,y*r,z*r);}f O%(v r){R x*r.x+y*r.y+z*r.z;}v(){}v O^(v r){R v(y*r.z-z*r.y,z*r.x-x*r.z,x*r.y-y*r.x);}v(f a,f b,f c){x=a;y=b;z=c;}v O!(){R*this*(1/sqrt(*this%*this));}}; f G[][4]={{0,0,0,1},{-2,-1.5,0,.2}};f u[99];i T(v o,v d,f& t,v& n){t=1e9;i m=0;if (abs(d.z)>.01) {f p=-o.z/d.z;v w=o+d*p;if(.01<p && 2.25<w%w && w%w<4.4) t=p,n=!v(1,0,1),m=1;} for(i k=2;k--;){v p=o+v(G[k][0],G[k][1],G[k][2]);f b=p%d,c=p%p-G[k][3]*G[k][3],q=b*b-c;if(q>0){f s=-b-sqrt(q);if(s<t && s>.01)t=s,n=!(p+d*t),m=2;}}R m;}f W(f H) {i j=floor(H); H=H-j;R ((1-H)*u[j]+H*u[j+1]);}f S(v o,v d){f t;v n;i m=T(o,d,t,n);if(!m)R 0;v h=o+d*t,l=!v(1,0,.07),r=d+n*(n%d*-2);f b=l%n;if(b<0||T(h,l,t,n))b=0;f p=.9*W(19*(h.z+2)); if(m&1){p=.5*W(24*sqrt(h%h));} R p*b;}i main(){for (i j=99;j--;) {u[j]=(.5+.5*rand()/RAND_MAX);}; printf("P6 640 360 255 ");v g=!v(-7.1,4.5,-5.4),a=!(v(0,0,1)^g),b=!(g^a);for(i y=360;y--;)for(i x=640;x--;){f p=11;{p=S(v(7.1, -4.5, 5.4),!((a*(x-320)+b*(y-180))*.00114+g))*250+p;}printf("%c%c%c",(i)p,(i)p,(i)p);}}
