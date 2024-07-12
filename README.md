@@ -45,7 +45,7 @@ printf("P6 640 360 255 ");v g=!v(-7.1,4.5,-5.4),a=!(v(0,0,1)^g),b=!(g^a);for(i y
 f p=11;{p=S(v(7.1, -4.5, 5.4),!((a*(x-320)+b*(y-180))*.00114+g))*250+p;}printf("%c%c%c",(i)p,(i)p,(i)p);}}
 ```
 
-(should be invoked with the output written to a `.ppm` file, e.g. ```hello > saturn.ppm```, where `hello` is the name for the compiled binary file)
+(should be invoked with the output written to a `.ppm` file, e.g. ```hello > saturn.ppm```, where `hello` is the name for the compiled binary)
 
 ![C++ (1099 characters)](Images/C++.png)
 
