@@ -4,7 +4,7 @@ A collection of 3D renderers written with a single purpose - to produce a real-l
 
 ## Wolfram Mathematica
 
-**The** shortest raytracer. The whole code is 477 characters (line breaks added for "readability"):
+**The** shortest raytracer. The whole code is **477 characters** (line breaks added for "readability"):
 
 ```
 W=320;H=180;v=.35/W;f=Norm;X={1,0,0};Z={0,0,1};L=Last;k=#/f@#&;t=Interpolation@RandomReal[1,99];
@@ -21,11 +21,11 @@ The result it produces:
 
 Available online on [Wolfram Cloud](https://www.wolframcloud.com/obj/566c07ee-4a30-44ad-8329-c29e07d14e01)
 
-Enabled in part by a few high-level features of the Wolfram language itself, and in part by a rather aggressive optimisation, favouring concise approximate calculations over exact but longer ones, and tailoring the renderer to the selected scene by excluding simulation of any effects not manifested at the specific positions of the objects relative to each other, the light, and the camera. A more sensible and rigorous version accompanied by some comments, is available in the project notebook.
+Enabled in part by a few high-level features of the Wolfram language itself, and in part by a rather aggressive optimisation, favouring concise approximate calculations over exact but longer ones and tailoring the renderer to the selected scene by excluding simulation of any effects not manifested at the specific positions of the objects, the light, and the camera. A more sensible and rigorous version accompanied by some comments, is available in the project's notebook.
 
 ## C++
 
-Based on [the C++ business card raytracer](https://fabiensanglard.net/rayTracing_back_of_business_card/) (1233 characters, not counting preprocessor directives), which served as an inspiration for the whole project. The Saturn raytracer forgoes some features of the original which are not essential to the scene at hand (such as depth of field and reflections), using the saved space to add more varied geometry (rings and variable-radius spheres not bound to nodes of a flat square grid) and a different procedural texture. The result takes 1099 characters (not counting preprocessor directives and inserted line breaks):
+Based on [the C++ business card raytracer](https://fabiensanglard.net/rayTracing_back_of_business_card/) (1233 characters, not counting preprocessor directives), which served as an inspiration for the whole project. The Saturn raytracer forgoes some features of the original which are not essential to the scene at hand (such as depth of field and reflections), using the saved space to add more varied geometry (rings and variable-radius spheres not bound to nodes of a flat square grid) and a different procedural texture. The result takes **1099 characters** (not counting preprocessor directives and inserted line breaks):
 
 ```
 #include <stdlib.h>
@@ -55,9 +55,9 @@ Not-as-minimal (but still rather short) real-time animated implementation. Comes
 
 ![GLSL](Images/GLSL.png)
 
-[The interactive version is available on Shadertoy](https://www.shadertoy.com/embed/stByRG?paused=false)
+The interactive version is available on [Shadertoy](https://www.shadertoy.com/embed/stByRG?paused=false)
 
-Even includes [the Satrun's hexagon](https://en.wikipedia.org/wiki/Saturn%27s_hexagon) on the north pole:
+Additionaly includes [the Satrun's hexagon](https://en.wikipedia.org/wiki/Saturn%27s_hexagon) on the north pole:
 
 ![Polar hexagon (GLSL)](<Images/GLSL hex.png>)
 
@@ -65,7 +65,7 @@ Even includes [the Satrun's hexagon](https://en.wikipedia.org/wiki/Saturn%27s_he
 
 ![After Effects](Images/AE.png)
 
-Not an actual raytracer, but rather an After Effects project that utilizes the built-in 3D rasterising engine (made for rendering exclusively flat square surfaces), and recreates the illusion of convex 3-dimensional objects with the help of built-in effects, generated textures, and Java Script expressions, which tie parameters of all objects to build a coherent scene and modify them based on the position of the camera:
+Not a raytracer, but rather an After Effects project that utilizes the built-in 3D rasterizing engine (made for rendering exclusively flat square surfaces), and recreates the illusion of convex 3-dimensional objects with the help of built-in effects, generated textures, and Java Script expressions, which bind parameters of all objects together to build a coherent scene and modify the look of each object based on the position of the camera:
 
 ![JS expressions](<Images/JS expressions.gif>)
 
