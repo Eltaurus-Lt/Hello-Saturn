@@ -17,10 +17,11 @@ Image@Table[T[40M.Z,k[M.{x v,y v,-1}],0],{y,H,-H,-1},{x,-W,W}]
 
 The result it produces:
 
+![Wolfram Mathematica (477 characters)](Images/Wolfram.png)
 
 Available online on [Wolfram Cloud](https://www.wolframcloud.com/obj/566c07ee-4a30-44ad-8329-c29e07d14e01)
 
-Enabled in part by a few high-level features of the Wolfram language itself, and in part by a rather aggressive optimisation, favoring concise approximate calculations over exact but longer ones, and tailoring the renderer to the selected scene by excluding simulation of any effects not manifested at the specific positions of the objects relative to each other, the light, and the camera. A more sensible and rigorous version accompanied by some comments, is available in the project notebook.
+Enabled in part by a few high-level features of the Wolfram language itself, and in part by a rather aggressive optimisation, favouring concise approximate calculations over exact but longer ones, and tailoring the renderer to the selected scene by excluding simulation of any effects not manifested at the specific positions of the objects relative to each other, the light, and the camera. A more sensible and rigorous version accompanied by some comments, is available in the project notebook.
 
 ## C++
 
@@ -46,23 +47,31 @@ f p=11;{p=S(v(7.1, -4.5, 5.4),!((a*(x-320)+b*(y-180))*.00114+g))*250+p;}printf("
 
 (should be invoked with the output written to a `.ppm` file, e.g. ```hello > saturn.ppm```, where `hello` is the name for the compiled binary file)
 
+![C++ (1099 characters)](Images/C++.png)
 
 ## GLSL (shaders)
 
 Not-as-minimal (but still rather short) real-time animated implementation. Comes with a free camera controlled with a mouse, an orbiting mode toggled by pressing `space`, antialiasing, and, for the lack thereof in the base language, a from-scratch random-number generator based on [logistic map](https://en.wikipedia.org/wiki/Logistic_map).
 
+![GLSL](Images/GLSL.png)
+
 [The interactive version is available on Shadertoy](https://www.shadertoy.com/embed/stByRG?paused=false)
 
 Even includes [the Satrun's hexagon](https://en.wikipedia.org/wiki/Saturn%27s_hexagon) on the north pole:
 
+![Polar hexagon (GLSL)](<Images/GLSL hex.png>)
 
 ## After Effects (JS)
 
+![After Effects](Images/AE.png)
+
 Not an actual raytracer, but rather an After Effects project that utilizes the built-in 3D rasterising engine (made for rendering exclusively flat square surfaces), and recreates the illusion of convex 3-dimensional objects with the help of built-in effects, generated textures, and Java Script expressions, which tie parameters of all objects to build a coherent scene and modify them based on the position of the camera:
 
+![JS expressions](<Images/JS expressions.gif>)
 
 Also imitates the polar hexagon:
 
+![Polar hexagon (AE)](<Images/AE hex.png>)
 
 but does not support drop shadows on the spheres due to technical limitations of the engine (adds semi-transparency to the rings though).
 
