@@ -51,7 +51,7 @@ f p=11;{p=S(v(7.1, -4.5, 5.4),!((a*(x-320)+b*(y-180))*.00114+g))*250+p;}printf("
 
 ## GLSL (shaders)
 
-Not-as-minimal (but still rather short) real-time animated implementation. Comes with a free camera controlled with a mouse, an orbiting mode toggled by pressing `space`, antialiasing, and, for the lack thereof in the base language, a from-scratch random-number generator based on [logistic map](https://en.wikipedia.org/wiki/Logistic_map).
+Not-as-minimal (but still rather short) real-time animated implementation. Comes with a free camera controlled with a mouse, an orbiting mode toggled by pressing `space`, antialiasing, and, for the lack thereof in the base language, a from-scratch random-number generator based on [logistic map](https://en.wikipedia.org/wiki/Logistic_map):
 
 ![GLSL](Images/GLSL.png)
 
