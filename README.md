@@ -21,7 +21,7 @@ The result it produces:
 
 Available online on [Wolfram Cloud](https://www.wolframcloud.com/obj/566c07ee-4a30-44ad-8329-c29e07d14e01)
 
-Enabled in part by a few high-level features of the Wolfram language itself, and in part by a rather aggressive optimisation, favouring concise approximate calculations over exact but longer ones and tailoring the renderer to the selected scene by excluding simulation of any effects not manifested at the specific positions of the objects, the light, and the camera. A more sensible and rigorous version accompanied by some comments, is available in the project's notebook.
+Enabled in part by a few high-level features of the Wolfram language itself, and in part by a rather aggressive optimisation, favouring concise approximate formulae over exact but longer ones and tailoring the renderer to the selected scene by excluding simulation of any effects not manifested at the specific positions of the objects, the light, and the camera. A more sensible and rigorous version accompanied by some comments, is available in the project's notebook.
 
 ## C++
 
@@ -65,7 +65,7 @@ Additionaly includes [the Satrun's hexagon](https://en.wikipedia.org/wiki/Saturn
 
 ![After Effects](Images/AE.png)
 
-Not a raytracer, but rather an After Effects project that utilizes the built-in 3D rasterizing engine (made for rendering exclusively flat square surfaces), and recreates the illusion of convex 3-dimensional objects with the help of built-in effects, generated textures, and Java Script expressions, which bind parameters of all objects together to build a coherent scene and modify the look of each object based on the position of the camera:
+An After Effects project that utilizes the built-in 3D rasterizing engine (made for rendering exclusively flat square surfaces), and recreates the illusion of convex 3-dimensional objects with the help of built-in effects, generated textures, and Java Script expressions, which bind parameters of all pieces together to build a coherent scene and modify the look of each object based on the position of the camera:
 
 ![JS expressions](<Images/JS expressions.gif>)
 
